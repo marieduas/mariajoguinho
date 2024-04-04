@@ -3,9 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mariajoguinho.MainPage">
 
-<grid>
+<Grid>
     
-    <image Source=
+    <Image Source="fundo.jpg"
+        Aspect="AspectFill"/>
 
+    <Image 
+           Source="panda.png"
+           Aspect="AspectFit"
+           Margin="70, 0, 35, 0"
+           VerticalOptions="End"/>
 
+    <Frame VerticalOptions="Start"
+           Margin="10,20"
+           BackgroundColor="#7cc204"
+           HeightRequest="200"
+           CornerRadius="20"/>
+         
+</Grid>
 </ContentPage>
