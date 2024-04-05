@@ -4,9 +4,10 @@
              x:Class="mariajoguinho.MainPage">
 
 <Grid>
+       
     
     <Image Source="fundo.jpg"
-        Aspect="AspectFill"/>
+           Aspect="AspectFill"/>
 
     <Image 
            Source="panda.png"
@@ -18,7 +19,51 @@
            Margin="10,20"
            BackgroundColor="#7cc204"
            HeightRequest="200"
-           CornerRadius="20"/>
+           CornerRadius="20"/>       
+</Grid>      
+
+<Grid>
+    <Grid.RowDefinitions>
+     <RowDefinition Height="*"/>
+     <RowDefinition Height="*"/>
+     <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<Grid.ColumnDefinitions>
+     <ColumnDefinition Width="40"/>
+     <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+
+<Image 
+     Source="comida.png"
+     Grid.Row="0"
+     Grid.Column="0"/>
+
+<Image
+     Source="Agua.png"
+     Grid.Row="1"
+     Grid.Column="0"/>
+
+<Image
+     Source="brinquedo.png"
+     Grid.Row="2"
+     Grid.Column="0"/>
+
+<ProgressoBar  x:Name="progressoFome"
+               Progress="0,5"
+               Grid.Row="0"
+               Grid.Column="1"/>
+
+<ProgressoBar  x:Name="progressoSede"
+               Progress="0,5"
+               Grid.Row="1"
+               Grid.Column="1"/> 
+
+<ProgressoBar  x:Name="progressoAlegria"
+               Progress="0,5"
+               Grid.Row="2"
+               Grid.Column="1"/>                             
+       
          
 </Grid>
 </ContentPage>
