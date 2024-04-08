@@ -2,68 +2,66 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mariajoguinho.MainPage">
+             Shell.NavBarIsVisible="False">
+     <Grid>
+          
+         <Image Source="fundo.jpg"
+                    Aspect="AspectFill"/>
 
-<Grid>
-       
-    
-    <Image Source="fundo.jpg"
-           Aspect="AspectFill"/>
+          <Image 
+                    Source="panda.jpg"
+                    Aspect="AspectFit"
+                    Margin="70, 0, 35, 0"
+                    VerticalOptions="End"/>
 
-    <Image 
-           Source="panda.png"
-           Aspect="AspectFit"
-           Margin="70, 0, 35, 0"
-           VerticalOptions="End"/>
+          <Frame VerticalOptions="Start"
+                    Margin="10,20"
+                    BackgroundColor="#7cc204"
+                    HeightRequest="200"
+                    CornerRadius="20">           
 
-    <Frame VerticalOptions="Start"
-           Margin="10,20"
-           BackgroundColor="#7cc204"
-           HeightRequest="200"
-           CornerRadius="20"/>       
-</Grid>      
+               <Grid>
+                    <Grid.RowDefinitions>
+                         <RowDefinition Height="*"/>
+                         <RowDefinition Height="*"/>
+                         <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-<Grid>
-    <Grid.RowDefinitions>
-     <RowDefinition Height="*"/>
-     <RowDefinition Height="*"/>
-     <RowDefinition Height="*"/>
-</Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="40"/>
+                         <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-<Grid.ColumnDefinitions>
-     <ColumnDefinition Width="40"/>
-     <ColumnDefinition Width="*"/>
-</Grid.ColumnDefinitions>
+                    <Image 
+                         Source="comida.jpg"
+                         Grid.Row="0"
+                         Grid.Column="0"/>
 
-<Image 
-     Source="comida.png"
-     Grid.Row="0"
-     Grid.Column="0"/>
+                    <Image
+                         Source="Agua.jpg"
+                         Grid.Row="1"
+                         Grid.Column="0"/>
 
-<Image
-     Source="Agua.png"
-     Grid.Row="1"
-     Grid.Column="0"/>
+                    <Image
+                         Source="brinquedo.jpg"
+                         Grid.Row="2"
+                         Grid.Column="0"/>
 
-<Image
-     Source="brinquedo.png"
-     Grid.Row="2"
-     Grid.Column="0"/>
+                    <ProgressBar  x:Name="progressoFome"
+                                   Progress="0,5"
+                                   Grid.Row="0"
+                                   Grid.Column="1"/>
 
-<ProgressoBar  x:Name="progressoFome"
-               Progress="0,5"
-               Grid.Row="0"
-               Grid.Column="1"/>
+                    <ProgressBar  x:Name="progressoSede"
+                                   Progress="0,5"
+                                   Grid.Row="1"
+                                   Grid.Column="1"/> 
 
-<ProgressoBar  x:Name="progressoSede"
-               Progress="0,5"
-               Grid.Row="1"
-               Grid.Column="1"/> 
-
-<ProgressoBar  x:Name="progressoAlegria"
-               Progress="0,5"
-               Grid.Row="2"
-               Grid.Column="1"/>                             
-       
-         
-</Grid>
+                    <ProgressBar  x:Name="progressoAlegria"
+                                   Progress="0,5"
+                                   Grid.Row="2"
+                                   Grid.Column="1"/>                                       
+               </Grid>
+          </Frame>
+     </Grid>
 </ContentPage>
