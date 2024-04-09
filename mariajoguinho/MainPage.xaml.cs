@@ -7,4 +7,8 @@ public partial class MainPage : ContentPage
     InitializeComponent();
     
   }
-}
+  void QuandoClicarNoBotao(object sender,EventArgs args)
+  {
+    QuandoClicarNoBoatao();
+  }
+} 

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="mariajoguinho.MainPage">
+             x:Class="mariajoguinho.MainPage"
              Shell.NavBarIsVisible="False">
      <Grid>
           
@@ -33,7 +33,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Image 
-                         Source="comida.jpg"
+                         Source="comida.png"
                          Grid.Row="0"
                          Grid.Column="0"/>
 
@@ -43,7 +43,7 @@
                          Grid.Column="0"/>
 
                     <Image
-                         Source="brinquedo.jpg"
+                         Source="brinquedo.png"
                          Grid.Row="2"
                          Grid.Column="0"/>
 
@@ -64,8 +64,25 @@
                </Grid>
           </Frame>
           <Frame HeightRequest="200"
-                 Horizontalopitions="End"
-                 VerticalOptions="Center"/>
-          <Grid       
+                 HorizontalOptions="End"
+                 VerticalOptions="Center">
+               <Grid>
+                    <Grid.RowDefinitions>
+                         <RowDefinition Height="*"/>
+                         <RowDefinition Height="*"/>
+                         <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                     <ImageButton Source="agua.jpg"
+                                  Grid.Row="0"
+                                  Clicked="QuandoClicarNoBoatao"/>
+                    <ImageButton  Source="comida.png"
+                                  Grid.Row="1"
+                                  Clicked="QuandoClicarNoBoatao"/>
+                    <ImageButton  Source="brinquedo.png"
+                                  Grid.Row="2"
+                                  Clicked="QuandoClicarNoBoatao"/>
+               </Grid>  
+          </Frame>     
      </Grid>
 </ContentPage>
