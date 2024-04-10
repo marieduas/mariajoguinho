@@ -75,13 +75,17 @@
 
                      <ImageButton Source="agua.jpg"
                                   Grid.Row="0"
-                                  Clicked="QuandoClicarNoBoatao"/>
+                                 />
                     <ImageButton  Source="comida.png"
                                   Grid.Row="1"
-                                  Clicked="QuandoClicarNoBoatao"/>
+                                 />
                     <ImageButton  Source="brinquedo.png"
                                   Grid.Row="2"
-                                  Clicked="QuandoClicarNoBoatao"/>
+                                  />
+                    <ImageButton  Source="brinquedo.png"
+                                  Clicked="TrocaPersonagem" 
+                                  Grid.Row="2"
+                                />
                </Grid>  
           </Frame>     
      </Grid>
