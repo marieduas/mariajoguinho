@@ -8,7 +8,7 @@
          <Image Source="fundo.jpg"
                     Aspect="AspectFill"/>
 
-          <Image 
+          <Image x:Name="Pandolino"
                     Source="panda.jpg"
                     Aspect="AspectFit"
                     Margin="70, 0, 35, 0"
@@ -47,17 +47,17 @@
                          Grid.Row="2"
                          Grid.Column="0"/>
 
-                    <ProgressBar  x:Name="progressoFome"
+                    <ProgressBar  x:Name="ProgressoFome"
                                    Progress="0,5"
                                    Grid.Row="0"
                                    Grid.Column="1"/>
 
-                    <ProgressBar  x:Name="progressoSede"
+                    <ProgressBar  x:Name="ProgressoSede"
                                    Progress="0,5"
                                    Grid.Row="1"
                                    Grid.Column="1"/> 
 
-                    <ProgressBar  x:Name="progressoAlegria"
+                    <ProgressBar  x:Name="ProgressoAlegria"
                                    Progress="0,5"
                                    Grid.Row="2"
                                    Grid.Column="1"/>                                       
@@ -71,21 +71,21 @@
                          <RowDefinition Height="*"/>
                          <RowDefinition Height="*"/>
                          <RowDefinition Height="*"/>
+                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                      <ImageButton Source="agua.jpg"
-                                  Grid.Row="0"
-                                 />
+                                  Grid.Row="0" 
+                                  Clicked="Aumentaagua"/>
                     <ImageButton  Source="comida.png"
-                                  Grid.Row="1"
-                                 />
+                                  Clicked="Aumentacomida" 
+                                  Grid.Row="1"/>
                     <ImageButton  Source="brinquedo.png"
-                                  Grid.Row="2"
-                                  />
-                    <ImageButton  Source="brinquedo.png"
-                                  Clicked="TrocaPersonagem" 
-                                  Grid.Row="2"
-                                />
+                                  Clicked="Aumentaalegria"
+                                  Grid.Row="2"/>
+                    <ImageButton  Source="seta.png"
+                                  Clicked="TrocaPersonagem"  
+                                  Grid.Row="3"/>
                </Grid>  
           </Frame>     
      </Grid>
