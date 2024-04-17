@@ -18,12 +18,10 @@ public partial class MainPage : ContentPage
     InitializeComponent();
 
     var timer =
-   Application.Current.Dispatcher.
-   CreateTimer();
+   Application.Current.Dispatcher.CreateTimer();
     timer.Interval =
    TimeSpan.FromSeconds(1);
-    timer.Tick += (s,e) =>
-    PassouTempo();
+    timer.Tick += (s,e) => PassouTempo();
     timer.Start();   
     
     atual=pandinha;
@@ -35,13 +33,17 @@ public partial class MainPage : ContentPage
     ProgressoAlegria.Progress = atual.GetAlegria();
   }
 
+    private Principal GetAtual()
+    {
+        return atual;
+    }
 
-  void PassouTempo()
+    void PassouTempo()
   {
-    atual.SetComida(atual.GetComida() - 0.1);
-     atual.SetAgua(atual.GetAgua() - 0.1);
-     atual.SetAlegria(atual.GetAlegria() - 0.1);
-     PassouTempo();
+        atual.SetComida(atual.GetComida() - 0.1);
+        atual.SetAgua(atual.GetAgua() - 0.1);
+        atual.SetAlegria(atual.GetAlegria() - 0.1);
+        Atualizaobicho();
   }
 
   public void TrocaPersonagem(object Sender, EventArgs args)
